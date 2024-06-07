@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #202632;
+}
+
+.advice-slip {
+  width: 30%;
+  padding: 40px;
+  padding-bottom: 60px;
+  background-color: #313b47;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.advice-id {
+  padding: 15px 0;
+  color: hsl(150, 100%, 66%);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+.advice {
+  color: hsl(193, 38%, 86%);
+  font-size: 1.5rem;
+  border-bottom: 1px solid hsl(217, 19%, 38%);
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.advice::after,
+.advice::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: hsl(193, 38%, 86%);
+  width: 5px;
+  height: 15px;
+  z-index: 100;
+  bottom: -7.5px;
+  border-radius: 4px;
+}
+
+.advice::after {
+  left: calc(50% - 8px);
+}
+
+.advice::before {
+  right: calc(50% - 8px);
+}
+
+.dice {
+  width: 55px;
+  height: 55px;
+  background-color: hsl(150, 100%, 66%);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dice > img {
+  scale: 0.9;
+}
